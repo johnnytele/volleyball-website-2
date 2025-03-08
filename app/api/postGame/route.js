@@ -1,6 +1,6 @@
 import ytdl from "ytdl-core";
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
+import  { MongoClient, ServerApiVersion } from 'mongodb';
 const uri = process.env.MONGO_CONNECTION_STRING;
 
 

@@ -1,6 +1,4 @@
-import { timeStamp } from 'console';
-
-const { MongoClient, ServerApiVersion } = require('mongodb');
+import  { MongoClient, ServerApiVersion } from 'mongodb';
 const uri = process.env.MONGO_CONNECTION_STRING;
 
 const teamId = process.env.TEAM_ID;
