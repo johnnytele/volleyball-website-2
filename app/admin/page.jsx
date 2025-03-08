@@ -14,7 +14,7 @@ export default function Admin() {
     const [playerName, setPlayerName] = useState("");
 
     const postPlayer = async () => {
-        const response = await fetch("/api/postPlayer", {
+        const response = await fetch("/.netlify/functions/postPlayer", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -27,7 +27,7 @@ export default function Admin() {
       };
 
       const postVideo = async () => {
-        const response = await fetch("/api/postGame", {
+        const response = await fetch("/.netlify/functions/postGame", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -57,7 +57,7 @@ export default function Admin() {
                 value={playerName}
                 onChange={(e) => setPlayerName(e.target.value)}
             />
-            <Button onClick={ postPlayer }>Post Video</Button> 
+            <Button onClick={ postPlayer }>Post Player</Button> 
         </div>
     </div>
   );

@@ -49,7 +49,7 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/data");
+        const response = await fetch("/.netlify/functions/data");
         const data = await response.json();
         if (response.ok) {
           setPlayers(data.players);
@@ -69,7 +69,7 @@ export default function Home() {
     if (selectedPlayerId && selectedVideoId) {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/getNotes", {
+        const response = await fetch("/.netlify/functions/getNotes", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

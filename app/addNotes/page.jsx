@@ -38,7 +38,7 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/data");
+        const response = await fetch("/.netlify/functions/data");
         const data = await response.json();
         if (response.ok) {
           setPlayers(data.players);
@@ -61,7 +61,7 @@ export default function Home() {
   };
 
   const addNote = async () => {
-    const response = await fetch("/api/addNote", {
+    const response = await fetch("/.netlify/functions/addNote", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
